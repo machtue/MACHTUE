@@ -1,165 +1,23 @@
-<<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOJA VIRTUAL MACHTUE</title>
-    <style>
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background-color: #8e99a2;
-            color: #725c5c;
-        }
-
-        
-        header {
-            background-color: #18293c;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-    
-        .catalogo {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px 40px 20px;
-        }
-
-
-        .produto {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-    
-        .produto:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-    
-        .produto img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 15px;
-        }
-
-    
-        .produto h2 {
-            font-size: 1.1rem;
-            color: #222;
-            margin-bottom: 8px;
-        }
-
-
-        .descricao {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-    
-        .preco {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #28a745;
-            margin-bottom: 15px;
-        }
-
-
-        .produto button {
-            background-color: #093e77;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            width: 100%;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .produto button:hover {
-            background-color: hsl(107, 72%, 28%);
-        }
-    </style>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Loja Virtual Machtue</h1>
-    </header>
-
-    <main class="catalogo">
+    <div class="login-card">
+        <h1>Login</h1>
+        <p>entre com seu acesso</p>
         
-        <div class="produto">
-            <img src="computer.jpg" alt="Notebook  de ouro">
-            <h2>Notebook de ouro</h2>
-            <p class="descricao">oferece um otimo conforto ao digitar.</p>
-            <p class="preco">R$ 1 000 000,000</p>
-            <button>Comprar</button>
-        </div>
-
+        <input type="text" id="usuario" placeholder="usuario">
+        <input type="password" id="senha" placeholder="Senha">
         
-        <div class="produto">
-            <img src="celular.jpg" alt="Smartphone Pro">
-            <h2>Smartphone Pro</h2>
-            <p class="descricao">Tela AMOLED 120Hz e câmera tripla de alta resolução.</p>
-            <p class="preco">R$ 1.890,00</p>
-            <button>Comprar</button>
-        </div>
-
-        
-        <div class="produto">
-            <img src="fone.jpg" alt="Fone Bluetooth Wireless">
-            <h2>Fone Bluetooth Wireless</h2>
-            <p class="descricao">Cancelamento de ruído ativo e bateria para até 30 horas.</p>
-            <p class="preco">R$ 299,00</p>
-            <button>Comprar</button>
-        </div>
-
-        <div class="produto">
-            <img src="teclado.jpg" alt="Tclado Gamer maguinetico">
-            <h2>Teclado Gamer  maguinetico</h2>
-            <p class="descricao">Oferece uma esperiencia de digitacao confortavel e selenciosa.</p>
-            <p class="preco">R$ 200,00</p>
-            <button>Comprar</button>
-        </div>
-
-
-        <div class="produto">
-            <img src="cadeiraaa.jpg" alt="Cadeira Gamer Ergonômica">
-            <h2>Cadeira Gamer Ergonômica</h2>
-            <p class="descricao">Ajuste de altura, apoio lombar e reclinação até 180°.</p>
-            <p class="preco">R$ 850,00</p>
-            <button>Comprar</button>
-        </div>
-    </main>
+        <button id="entrar">entrar</button>
+    </div>
+    <script src="script.js"></script>
 
 </body>
 </html>
