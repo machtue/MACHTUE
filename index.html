@@ -1,53 +1,104 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil e Currículo</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>machtue - Galeria de Arte</title>
 </head>
 <body>
 
-    <div class="card-curriculo">
-      
-        
-        <div class="perfil">
-            <img src="gato.jpg" alt="Foto de Perfil" class="foto-perfil">
-            <h1 id="nome-usuario">Samuel Machtue</h1>
-            <div class="botoes-perfil">
-                <button id="entrar" class="btn-acao">Editar</button>
-                <button id="sair" class="btn-acao">Sair</button>
-            </div>
-        </div>
+  <header>
+    <div class="logo">machtue<span>.</span></div>
+    <nav>
+      <button id="btn-sobre" class="active" onclick="showPage('sobre')">Sobre</button>
+      <button id="btn-quadros" onclick="showPage('quadros')">Quadros</button>
+    </nav>
+  </header>
 
-        <hr>
+  <!-- Página 1: Sobre (Colorida e Atraente) -->
+  <section id="page-sobre" class="page active">
+    
+    <div class="hero-banner">
+      <span class="badge-destaque">✨ Arte que Inspira</span>
+      <h1>Dê mais vida e cor para o seu ambiente</h1>
+      <p>Na <strong>machtue</strong>, acreditamos que cada parede é uma tela em branco esperando por personalidade, alegria e estilo único.</p>
+      <button class="btn-cta" onclick="showPage('quadros')">Ver Quadros à Venda</button>
+    </div>
 
-        
-        <div class="secao">
-            <h2>Informações Pessoais</h2>
-            <ul class="lista-info">
-                <li><strong>E-mail:</strong> machtuesamuel28@gmail.com</li>
-                <li><strong>Data de Nascimento:</strong> 28/04/2009</li>
-                <li>
-                    <strong>Cidade:</strong> 
-                    <a href="#" id="link-cidade" title="Cidade do usuário">Goiânia - GO</a>
-                </li>
-            </ul>
-        </div>
+    <!-- Bloco de Vantagens Coloridas -->
+    <div class="vantagens-grid">
+      <div class="vantagem-card card-azul">
+        <div class="icone">🎨</div>
+        <h3>Exclusividade</h3>
+        <p>Obras selecionadas com muito carinho para transformar qualquer espaço da sua casa.</p>
+      </div>
 
-        
-        <div class="secao">
-            <h2>Formação</h2>
-            <ul class="lista-info">
-                <li><strong>Ensino Médio:</strong> Escola Herta Layser (Manhã)</li>
-                <li><strong>Curso Técnico:</strong> Desenvolvimento de Sistemas (SENAI)</li>
-                <li><strong>Projetos Futuros:</strong> Criar uma loja virtual onde usuários navegam por produtos, adicionam itens ao carrinho e simulam um checkout.</li>
-            </ul>
-        </div>
+      <div class="vantagem-card card-roxo">
+        <div class="icone">✨</div>
+        <h3>Alta Qualidade</h3>
+        <p>Impressão de ponta com cores vivas, duráveis e acabamento impecável.</p>
+      </div>
 
+      <div class="vantagem-card card-rosa">
+        <div class="icone">🚀</div>
+        <h3>Envio Rápido</h3>
+        <p>Embalagem segura e reforçada para que sua arte chegue perfeita até você.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Página 2: Quadros -->
+  <section id="page-quadros" class="page">
+    <div class="titulo-secao">
+      <h2>Nossa Coleção de Quadros</h2>
+      <p>Escolha sua obra favorita e renove sua decoração</p>
     </div>
     
-    <script src="script.js"></script>
+    <div class="quadros-grid">
+      <!-- Quadro 1 -->
+      <div class="card-quadro">
+        <div class="img-container">
+          <img src="cavalo.jpg" alt="Quadro Cavalo">
+          <span class="tag-card">Destaque</span>
+        </div>
+        <h3>Quadro Cavalo</h3>
+        <p class="tamanho">Tamanho: 60x90cm</p>
+        <p class="preco">R$ 250,00</p>
+        <button class="btn-comprar" onclick="comprar('Quadro Cavalo')">Comprar Agora</button>
+      </div>
+
+      <!-- Quadro 2 -->
+      <div class="card-quadro">
+        <div class="img-container">
+          <img src="monaliza.jpg" alt="Quadro Monalisa">
+          <span class="tag-card">Especial</span>
+        </div>
+        <h3>Quadro Monalisa</h3>
+        <p class="tamanho">Tamanho: 50x70cm</p>
+        <p class="preco">R$ 180,00</p>
+        <button class="btn-comprar" onclick="comprar('Quadro Monalisa')">Comprar Agora</button>
+      </div>
+
+      <!-- Quadro 3 -->
+      <div class="card-quadro">
+        <div class="img-container">
+          <img src="quadro.jpg" alt="Quadro Moderno">
+          <span class="tag-card">Moderno</span>
+        </div>
+        <h3>Quadro Moderno</h3>
+        <p class="tamanho">Tamanho: 70x100cm</p>
+        <p class="preco">R$ 320,00</p>
+        <button class="btn-comprar" onclick="comprar('Quadro Moderno')">Comprar Agora</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 machtue. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

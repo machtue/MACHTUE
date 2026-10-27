@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>machtue - Loja</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="quadros.html"class="botao-principal"></a>ver imoveis</a>
+    <h1>machtue</h1>
+    <nav>
+      <a href="index.html">Sobre</a>
+      <a href="loja.html" class="active">Quadros</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Quadros à Venda</h2>
+
+    <div class="quadros">
+      
+      <div class="card">
+        <div class="img-container">
+          <img src="cavalo.jpg" alt="Quadro Cavalo">
+        </div>
+        <h3>Quadro Cavalo</h3>
+        <p class="tamanho">Tamanho: 60x90cm</p>
+        <p class="preco">R$ 250,00</p>
+        <button onclick="comprar('Quadro Cavalo')">Comprar</button>
+      </div>
+
+      
+      <div class="card">
+        <div class="img-container">
+          <img src="monaliza.jpg" alt="Quadro Monalisa">
+        </div>
+        <h3>Quadro Monalisa</h3>
+        <p class="tamanho">Tamanho: 50x70cm</p>
+        <p class="preco">R$ 1.800.000,00</p>
+        <button onclick="comprar('Quadro Monalisa')">Comprar</button>
+      </div>
+
+      
+      <div class="card">
+        <div class="img-container">
+          <img src="quadro.jpg" alt="Quadro Moderno">
+        </div>
+        <h3>Quadro Moderno</h3>
+        <p class="tamanho">Tamanho: 70x100cm</p>
+        <p class="preco">R$ 3.200,00</p>
+        <button onclick="comprar('Quadro Moderno')">Comprar</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function comprar(nome) {
+      alert('Você escolheu o produto: ' + nome);
+    }
+  </script>
+</body>
+</html>
